@@ -1,0 +1,42 @@
+void putch(int ch)
+{
+	int *p;
+	
+	p = (int *)32768;
+	*p = ch;
+	return;
+}
+
+void print_arr(int[10] arr, int len)
+{
+	int i;
+	
+	i = 0;
+	while (i < len) {
+		putch(arr[i]);
+		i = i + 1;
+	}
+	return;
+}
+
+int main(void)
+{
+	int[11] arr;
+	
+	arr[0] = 72;
+	arr[1] = 101;
+	arr[2] = 108;
+	arr[3] = 108;
+	arr[4] = 111;
+	
+	arr[5] = 32;
+	
+	arr[6] = 87;
+	arr[7] = 111;
+	arr[8] = 114;
+	arr[9] = 108;
+	arr[10] = 100;
+	print_arr(arr, 11);
+	
+	return 0;
+}
